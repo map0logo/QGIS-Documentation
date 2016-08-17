@@ -469,6 +469,12 @@ is displayed in a pop-up dialog.
 
    Measure Angle
 
+.. index::
+   single: Select
+   single: Select; All, Select; Invert, Select; Expression, Select; Form
+   single: Select; Polygon, Select; Freehand, Select; Rectangle, Select; Radius
+   pair: Select; Deselect
+
 .. _`sec_selection`:
 
 Select and deselect features
@@ -484,16 +490,53 @@ tool:
 * |selectFreehand| :sup:`Select Features by Freehand`
 * |selectRadius| :sup:`Select Features by Radius`
 
-To deselect all selected features, click on |deselectAll| :sup:`Deselect
-Features from All Layers`.
+If you want to select from attribute table, you can choose one of these tools
+(note that attribute table and map canvas show the same information, so if you
+select one feature in attribute table, it will be selected in map canvas also):
 
-|expressionSelect| :sup:`Select features using an expression` allows user
-to select features using expression dialog. See :ref:`vector_expressions`
-chapter for some example.
+* |expressionSelect| :sup:`Select By Expression...` allows user to select
+  features using expression dialog. See :ref:`vector_expressions` chapter for
+  some example.
+* |formSelect| :sup:`Select Features By Value...` or press :kbd:`F3`
+* |deselectAll| :sup:`Deselect Features from All Layers` or press
+  :kbd:`Ctrl+Shift+A` to deselect all selected features in all layers.
+* |selectAll| :sup:`Select All Features` or press :kbd:`Ctrl+A` to select all
+  features in the current layer.
+* |invertSelection| :sup:`Invert Feature Selection` to invert the selection in
+  the current layer.
+
+.. note:: The :menuselection:`View --> Select` menu list the same possibilities.
 
 Users can save selected features into a **New Memory Vector Layer** or a
 **New Vector Layer** using :menuselection:`Edit --> Copy Features` and
 :menuselection:`Edit --> Paste Features as` in the wanted format.
+
+.. index:: Select; By Value
+
+About Select Features By Value
+-------------------------------
+
+This feature opens a window to allow the user to choose for each column of the 
+attribute table which value to look for, if the search should be case sensitive
+and the operation that should be used. Operation can be one of:
+
+* :guilabel:`Exclude field`,
+* :guilabel:`Equal to (=)`,
+* :guilabel:`Not equal to`,
+* :guilabel:`Greater than (>)` (only for fields of integer or decimal type),
+* :guilabel:`Less than (<)` (only for fields of integer or decimal type),
+* :guilabel:`Greater than or equal to (>=)` (only for fields of integer
+  or decimal type),
+* :guilabel:`Less than or equal to (<=)` (only for fields of integer or
+  decimal type),
+* :guilabel:`Contains` (only for fields of type string),
+* :guilabel:`Not contains` (only for fields of type string),
+* :guilabel:`is missing (null)`,
+* :guilabel:`is not missing (null)`
+
+The window allows user to :guilabel:`Reset form` or to :guilabel:`Select
+features`, :guilabel:`Add to current selection`, :guilabel:`Filter current
+selection`, :guilabel:`Remove from current selection`.
 
 .. _data_defined:
 
@@ -569,12 +612,17 @@ display three kinds of information:
   is added, namely ``view feature form`` for editing. You can define more actions
   in the layer's properties dialog.
 * **Derived**: This information is calculated or derived from other information.
-  This includes the feature id, its length or perimeter and area in map units depending
-  on its geometry, the count of spatial parts and the number of the clicked part in case
-  of multi-geometry, the count of vertices in the feature and the number of the closest
-  one to the point clicked.
-  It also reports the X and Y (and Z/M if available) coordinate values of both clicked point
-  and feature closest vertex.
+  This includes:
+  
+  * general information about the feature and its geometry: feature id, length or perimeter
+    and area in map units depending on its geometry, the count of spatial parts and
+    the number of the clicked part in case of multi-geometry, the count of vertices in
+    the feature and the number of the closest one to the point clicked
+  * coordinates information: the X and Y (and Z/M if available) coordinate values of the
+    clicked point, the feature closest vertex and its first and last vertices.
+    In case you click on a curved line using the info tool, QGIS will also display the
+    radius of that section in the panel result.
+    
 * **Data attributes**: This is the list of attribute fields and values for the feature that
   has been clicked.
 
@@ -732,8 +780,9 @@ Spatial Bookmarks
    single:spatial bookmarks;see bookmarks
 
 Spatial Bookmarks allow you to "bookmark" a geographic location and return to
-it later. Bookmarks are saved on the computer, meaning that they are available
-from any project in the same computer.
+it later. By default, bookmarks are saved on the computer, meaning that they are available
+from any project in the same computer. If you wish to store the bookmark in the project 
+file (:file:`.qgs`) then you can do this by selecting the :guilabel:`In Project` checkbox.  
 
 Creating a Bookmark
 -------------------
@@ -744,6 +793,7 @@ To create a bookmark:
 #. Select the menu option :menuselection:`View --> New Bookmark` or press
    :kbd:`Ctrl-B`. The Spatial Bookmark panel opens with the newly created bookmark.
 #. Enter a descriptive name for the bookmark (up to 255 characters).
+#. Check the :guilabel:`In Project` box if you wish to save the bookmark in the project file.
 #. Press :kbd:`Enter` to add the bookmark or click elsewhere.
 
 Note that you can have multiple bookmarks with the same name.

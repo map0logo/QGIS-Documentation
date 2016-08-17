@@ -89,20 +89,22 @@ Manage Layers and overview
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|addOgrLayer|                   ``|addOgrLayer|``                   \                               \
+|addOgrLayer|                   ``|addOgrLayer|``                   |addDb2Layer|                   ``|addDb2Layer|``
 |addRasterLayer|                ``|addRasterLayer|``                |addMssqlLayer|                 ``|addMssqlLayer|``
-|addLayer|                      ``|addLayer|``                      |addSpatiaLiteLayer|            ``|addSpatiaLiteLayer|``
-|newVectorLayer|                ``|newVectorLayer|``                |removeLayer|                   ``|removeLayer|``
+|addDelimitedTextLayer|         ``|addDelimitedTextLayer|``         |addSpatiaLiteLayer|            ``|addSpatiaLiteLayer|``
+|addPostgisLayer|               ``|addPostgisLayer|``               |addOracleLayer|                ``|addOracleLayer|``
+|addAfsLayer|                   ``|addAfsLayer|``                   |addAmsLayer|                   ``|addAmsLayer|``
 |virtualLayer|                  ``|virtualLayer|``                  |wms|                           ``|wms|``
 |wcs|                           ``|wcs|``                           |wfs|                           ``|wfs|``
-|oracleRaster|                  ``|oracleRaster|``
+|newVectorLayer|                ``|newVectorLayer|``                |newSpatiaLiteLayer|            ``|newSpatiaLiteLayer|``
+|newGeoPackageLayer|            ``|newGeoPackageLayer|``            |createMemory|                  ``|createMemory|``
 |dbManager|                     ``|dbManager|``                     |gdal|                          ``|gdal|``
 |inOverview|                    ``|inOverview|``                    |addAllToOverview|              ``|addAllToOverview|``
-|removeAllOVerview|             ``|removeAllOVerview|``             \                               \
+|removeAllOVerview|             ``|removeAllOVerview|``             |removeLayer|                   ``|removeLayer|``
 |showAllLayers|                 ``|showAllLayers|``                 |hideAllLayers|                 ``|hideAllLayers|``
 |showPresets|                   ``|showPresets|``                   |zip|                           ``|zip|``
+|addLayer|                      ``|addLayer|``                      \                               \
 ==============================  ==================================  ==============================  ==================================
-
 
 File
 ....
@@ -191,23 +193,24 @@ Icon                            Substitution                        Icon        
 |selectFreehand|                ``|selectFreehand|``                |selectRadius|                  ``|selectRadius|``
 |selectAll|                     ``|selectAll|``                     |deselectAll|                   ``|deselectAll|``
 |invertSelection|               ``|invertSelection|``               |expressionSelect|              ``|expressionSelect|``
-|selectAllTree|                 ``|selectAllTree|``                 |select|                        ``|select|``                
-|dataDefined|                   ``|dataDefined|``                   |expression|                    ``|expression|``
-|dataDefineOn|                  ``|dataDefineOn|``                  |dataDefineExpressionOn|        ``|dataDefineExpressionOn|``
-|dataDefineError|               ``|dataDefineError|``               |dataDefineExpressionError|     ``|dataDefineExpressionError|``
-|filter|                        ``|filter|``                        |expressionFilter|              ``|expressionFilter|``
-|filterMap|                     ``|filterMap|``
+|selectAllTree|                 ``|selectAllTree|``                 |select|                        ``|select|``
+|formSelect|                    ``|formSelect|``                    |dataDefined|                   ``|dataDefined|``
+|expression|                    ``|expression|``                    |dataDefineOn|                  ``|dataDefineOn|``
+|dataDefineExpressionOn|        ``|dataDefineExpressionOn|``        |dataDefineError|               ``|dataDefineError|``
+|dataDefineExpressionError|     ``|dataDefineExpressionError|``     |filter|                        ``|filter|``
+|expressionFilter|              ``|expressionFilter|``              |filterMap|                     ``|filterMap|``
 ==============================  ==================================  ==============================  ==================================
 
 
-Labels
-......
+Labels and Diagrams
+...................
 
 =======================  ===========================  =======================  ===========================
 Icon                     Substitution                 Icon                     Substitution
 =======================  ===========================  =======================  ===========================
 |labeling|               ``|labeling|``               |textAnnotation|         ``|textAnnotation|``
 |annotation|             ``|annotation|``             |formAnnotation|         ``|formAnnotation|``
+|diagramProperties|      ``|diagramProperties|``      \                        \
 =======================  ===========================  =======================  ===========================
 
 Help
@@ -238,8 +241,8 @@ Other basic icons
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|arrowDown|                     ``|arrowDown|``                     |arrowUp|                       ``|arrowUp|``     
-|arrowLeft|                     ``|arrowLeft|``                     |arrowRight|                    ``|arrowRight|``     
+|arrowDown|                     ``|arrowDown|``                     |arrowUp|                       ``|arrowUp|``
+|arrowLeft|                     ``|arrowLeft|``                     |arrowRight|                    ``|arrowRight|``
 |signPlus|                      ``|signPlus|``                      |signMinus|                     ``|signMinus|``
 |projectProperties|             ``|projectProperties|``             |options|                       ``|options|``
 |copyrightLabel|                ``|copyrightLabel|``                |northArrow|                    ``|northArrow|``
@@ -264,8 +267,8 @@ Icon                         Substitution                     Icon              
 |expressionSelect|           ``|expressionSelect|``           |deleteSelected|         ``|deleteSelected|``
 |newAttribute|               ``|newAttribute|``               |deleteAttribute|        ``|deleteAttribute|``
 |newTableRow|                ``|newTableRow|``                |calculateField|         ``|calculateField|``
-|draw|                       ``|draw|``                       |form|                   ``|form|``
-|rendererAttributeTable|     ``|rendererAttributeTable|``     \                        \
+|draw|                       ``|draw|``                       |formView|               ``|formView|``
+|conditionalFormatting|      ``|conditionalFormatting|``      |multiEdit|              ``|multiEdit|``
 ============================ ===============================  =======================  ===========================
 
 
@@ -299,6 +302,7 @@ Icon                     Substitution                 Icon                     S
 |filePrint|              ``|filePrint|``              |saveMapAsImage|         ``|saveMapAsImage|``
 |saveAsSVG|              ``|saveAsSVG|``              |saveAsPDF|              ``|saveAsPDF|``
 |addArrow|               ``|addArrow|``               |addBasicShape|          ``|addBasicShape|``
+|addNodesShape|          ``|addNodesShape|``          |editNodesShape|         ``|editNodesShape|``
 |addMap|                 ``|addMap|``                 |addLegend|              ``|addLegend|``
 |addHtml|                ``|addHtml|``                |addTable|               ``|addTable|``
 |label|                  ``|label|``                  |scaleBar|               ``|scaleBar|``
@@ -352,7 +356,7 @@ Icon                            Substitution                        Icon        
 |spatialQuery|                  ``|spatialQuery|``                  |selectSubsetLayer|             ``|selectSubsetLayer|``
 |selectCreateLayer|             ``|selectCreateLayer|``             |metasearch|                    ``|metasearch|``
 |geometryChecker|               ``|geometryChecker|``               |geometrySnapper|               ``|geometrySnapper|``
-|topologychecker|               ``|topologychecker|``
+|topologychecker|               ``|topologychecker|``               |oracleRaster|                  ``|oracleRaster|``
 ==============================  ==================================  ==============================  ==================================
 
 

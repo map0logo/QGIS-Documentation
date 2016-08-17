@@ -218,7 +218,7 @@ latex_elements = {
 
 rst_prolog = """
 .. role:: disclaimer
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.8 for QGIS 2.8 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org/2.14 for QGIS 2.14 docs and translations.`
 """
 
 # Substitutions below are sorted and should be in lowerCamelCase
@@ -232,7 +232,7 @@ rst_epilog = """
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
-.. |CURRENT| replace:: 2.8
+.. |CURRENT| replace:: 2.14
 
 .. |degrees| unicode:: 0x00B0
    :ltrim:
@@ -244,12 +244,18 @@ rst_epilog = """
    :width: 1.5em
 .. |add| image:: /static/common/mActionAdd.png
    :width: 1.5em
+.. |addAfsLayer| image:: /static/common/mActionAddAfsLayer.png
+   :width: 1.5em
 .. |addAllToOverview| image:: /static/common/mActionAddAllToOverview.png
+   :width: 1.5em
+.. |addAmsLayer| image:: /static/common/mActionAddAmsLayer.png
    :width: 1.5em
 .. |addArrow| image:: /static/common/mActionAddArrow.png
    :width: 1.5em
 .. |addBasicShape| image:: /static/common/mActionAddBasicShape.png
    :width: 1.5em
+.. |addDb2Layer| image:: /static/common/mActionAddDb2Layer.png
+   :width: 1.5em    
 .. |addDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
    :width: 1.5em
 .. |addGCPPoint| image:: /static/common/mActionAddGCPPoint.png
@@ -267,6 +273,8 @@ rst_epilog = """
 .. |addMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
 .. |addMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
+   :width: 1.5em
+.. |addNodesShape| image:: /static/common/mActionAddNodesShape.png
    :width: 1.5em
 .. |addOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
@@ -387,6 +395,8 @@ rst_epilog = """
    :width: 1.5em
 .. |composerManager| image:: /static/common/mActionComposerManager.png
    :width: 1.5em
+.. |conditionalFormatting| image:: /static/common/mActionConditionalFormatting.png
+   :width: 1.5em
 .. |contextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
 .. |convexHull| image:: /static/common/convex_hull.png
@@ -400,6 +410,8 @@ rst_epilog = """
 .. |crs| image:: /static/common/CRS.png
    :width: 1.5em
 .. |createGPX| image:: /static/common/create_gpx.png
+   :width: 1.5em
+.. |createMemory| image:: /static/common/mActionCreateMemory.png
    :width: 1.5em
 .. |customProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
@@ -417,6 +429,8 @@ rst_epilog = """
    :width: 1.5em
 .. |dateTimeEdit|  image:: /static/common/datetimeedit.png
    :width: 1.5em
+.. |db2| image:: /static/common/mIconDb2.png
+   :width: 1.5em   
 .. |dbManager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |defineProjection| image:: /static/common/define_projection.png
@@ -441,6 +455,8 @@ rst_epilog = """
    :width: 1.5em
 .. |diagram| image:: /static/common/diagram.png
    :width: 2em
+.. |diagramProperties| image:: /static/common/mActionDiagramProperties.png
+   :width: 1.5em
 .. |dial| image:: /static/common/dial.png
    :width: 1.5em
 .. |dialogButtonBox|  image:: /static/common/dialogbuttonbox.png
@@ -468,6 +484,8 @@ rst_epilog = """
 .. |editCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
 .. |editCut| image:: /static/common/mActionEditCut.png
+   :width: 1.5em
+.. |editNodesShape| image:: /static/common/mActionEditNodesShape.png
    :width: 1.5em
 .. |editPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
@@ -524,9 +542,11 @@ rst_epilog = """
    :width: 1.5em
 .. |fontComboBox|  image:: /static/common/fontcombobox.png
    :width: 1.5em
-.. |form| image:: /static/common/mActionForm.png
-   :width: 1.5em
 .. |formAnnotation| image:: /static/common/mActionFormAnnotation.png
+   :width: 1.5em
+.. |formSelect| image:: /static/common/mIconFormSelect.png
+   :width: 1.5em
+.. |formView| image:: /static/common/mActionFormView.png
    :width: 1.5em
 .. |frame|  image:: /static/common/frame.png
    :width: 1.5em
@@ -803,6 +823,8 @@ rst_epilog = """
    :width: 1.5em
 .. |moveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
+.. |multiEdit| image:: /static/common/mActionMultiEdit.png
+   :width: 1.5em
 .. |multiToSingle| image:: /static/common/multi_to_single.png
    :width: 1.5em
 .. |neighbor| image:: /static/common/neighbour.png
@@ -812,6 +834,8 @@ rst_epilog = """
 .. |newBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
 .. |newComposer| image:: /static/common/mActionNewComposer.png
+   :width: 1.5em
+.. |newGeoPackageLayer| image:: /static/common/mActionNewGeoPackageLayer.png
    :width: 1.5em
 .. |newSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
    :width: 1.5em
@@ -830,8 +854,6 @@ rst_epilog = """
 .. |offlineEditingSync| image:: /static/common/offline_editing_sync.png
    :width: 1.5em
 .. |offsetCurve| image:: /static/common/mActionOffsetCurve.png
-   :width: 1.5em
-.. |openForm| image:: /static/common/mActionOpenForm.png
    :width: 1.5em
 .. |openTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
@@ -951,8 +973,6 @@ rst_epilog = """
 .. |removeAllOVerview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
 .. |removeLayer| image:: /static/common/mActionRemoveLayer.png
-   :width: 1.5em
-.. |rendererAttributeTable| image:: /static/common/rendererCategorizedSymbolOld.png
    :width: 1.5em
 .. |rendering| image:: /static/common/rendering.png
    :width: 1.5em

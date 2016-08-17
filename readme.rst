@@ -8,19 +8,20 @@ QGIS Testing Documentation is built from corresponding branch and NOT translated
 
 Only the current stable branch is available for translation.
 
-Latest stable documentation is on http://docs.qgis.org/2.8
+Latest stable documentation is on http://docs.qgis.org/2.14
 
 Testing is http://docs.qgis.org/testing
 
+- QGIS 2.8 docs http://docs.qgis.org/2.8
 - QGIS 2.6 docs http://docs.qgis.org/2.6
 - QGIS 2.2 docs http://docs.qgis.org/2.2
 - QGIS 2.0 docs http://docs.qgis.org/2.0
 - QGIS 1.8 docs http://docs.qgis.org/1.8
 
 Translations are also available via the docs.qgis.org language path:
-for example for the German language: http://docs.qgis.org/2.6/de
+for example for the German language: http://docs.qgis.org/2.14/de
 
-PDF versions of the manual are available here: http://docs.qgis.org/2.8/pdf, http://docs.qgis.org/2.6/pdf/ http://docs.qgis.org/2.2/pdf/ 
+PDF versions of the manual are available here: http://docs.qgis.org/2.14/pdf, http://docs.qgis.org/2.8/pdf, http://docs.qgis.org/2.6/pdf/ http://docs.qgis.org/2.2/pdf/ 
 http://docs.qgis.org/2.0/pdf/, http://docs.qgis.org/1.8/pdf/ and http://docs.qgis.org/testing/pdf
 
 
@@ -113,6 +114,15 @@ Or use the fullhtml target of make (which will checkout the branch)::
     make fullhtml
     # to build eg dutch:
     make LANG=nl fullhtml
+
+Trying to build a fullhtml you might get an Exception: ``No user credentials found for host https://www.transifex.com``.
+To fix this, add a ``~/.transifexrc`` file stored in the user's home directory with following information::
+
+    [https://www.transifex.com]
+    username = user
+    token =
+    password = p@ssw0rd
+    hostname = https://www.transifex.com
 
 To gather new strings in a pot (.po) file for your language, and merge them with 
 existing translations in the po files (normally to be run by your language maintainer)::
@@ -309,6 +319,11 @@ Manual and Application Translations
     * Contributor : Alexandre Neto < senhor.neto[at]gmail.com >
     * Contributor : Zara Teixeira < zarafani[at]gmail.com >
 
+  * Romanian Team Lead: Sorin Călinică < sorin.calinica[at]gmail.com >, Tudor Bărăscu < tudor.barascu[at]qtibia.ro >
+    
+    * Contributor: Georgiana Ioanovici
+    * Contributor: Alex Bădescu
+
   * Russian Team Lead: Alex Bruy < alexander.bruy[at]gmail.com >
   
   * Spanish Team Lead : Carlos Dávila < cdavilam[at]orangecorreo.es >
@@ -332,3 +347,8 @@ Team Lead) and supported by numerous contributors.
 * Russian Translation
 
   * Contributor: Alexander Bruy  <alexander.bruy[at]gmail.com>
+
+* Romanian Translation
+
+  * Contributor: Sorin Călinică < sorin.calinica[at]gmail.com >
+  * Contributor: Tudor Bărăscu < tudor.barascu[at]qtibia.ro >
